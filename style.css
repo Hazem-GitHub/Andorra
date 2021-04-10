@@ -1,0 +1,331 @@
+@import url('./assets/font/Tajawal-Light.ttf');
+@import url('./assets/font/Tajawal-Regular.ttf');
+@import url('./assets/font/Tajawal-Medium.ttf');
+@import url('./assets/font/Tajawal-Bold.ttf');
+@import url('./assets/font/Tajawal-Black.ttf');
+
+
+@import url('./assets/font/NunitoSans-Light.ttf');
+@import url('./assets/font/NunitoSans-Regular.ttf');
+@import url('./assets/font/NunitoSans-SemiBold.ttf');
+@import url('./assets/font/NunitoSans-Bold.ttf');
+@import url('./assets/font/NunitoSans-ExtraBold.ttf');
+
+:root {
+    --goldLight: #d69778;
+    --goldDark: #a3694b;
+    --black: #212121;
+    --white: #fefefe;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+button:focus{
+    outline: 1px solid var(--goldLight);
+}
+html{
+    width: 100%;
+    overflow-x: hidden;
+    height: -webkit-fill-available;
+}
+body{
+    min-height: 100vh;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+}
+
+.en{
+    font-family: 'NunitoSans', sans-serif!important;
+    font-weight: 400;
+}
+.ar{
+    font-family: 'Tajawal', sans-serif!important;
+    font-weight: 500;
+    direction: rtl;
+}
+.ar p,
+.ar h3,
+.ar h4,
+.ar ul,
+.ar ul li,
+.ar ol,
+.ar ol li
+.ar input:not([type=email]){
+    text-align: right;
+    direction: rtl;
+}
+
+.pageContainer{
+    position: relative;
+    /* height: 100vh; */
+    
+
+}
+.langBtns{
+    width: 100%;
+    max-width: 960px;
+    margin:0 auto;
+    padding: 2em 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height:10%;
+}
+
+.langBtns button{
+    border: 1px solid var(--goldLight);
+    /* padding: 12px 24px; */
+    height: 40px;
+    width: 80px;
+    background: var(--white);
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 0.8;
+}
+.langBtns button.ar{
+    font-size: 16px;
+}
+.langBtns button.active{
+    background: var(--goldLight);
+    background: rgb(214,151,120);
+background: linear-gradient(225deg, rgba(214,151,120,1) 0%, rgba(163,105,75,1) 100%);
+    font-weight: 500;
+    color: var(--white);
+}
+
+
+
+
+/* LOGIN LAYOUT */
+.layoutsContainer{
+    width: 100%;
+    max-width: 960px;
+    margin:0 auto;
+    height: 90%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.layoutsContainer .logoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    height:20vh;
+}
+.layoutsContainer .logoContainer a {
+    text-align: center;
+}
+.layoutsContainer .logoContainer a img{
+    max-height: 180px;
+    max-width: 220px;
+}
+
+.layoutsContainer .layout{
+    width: 100%;
+    max-width: 960px;
+    overflow: hidden;
+    display: none;
+}
+.layoutsContainer .layout.active{
+    display: block;
+}
+
+.layoutsContainer .layout .loginLayout{
+    display: block;
+}
+.layoutsContainer .layout .loginLayout.hidden{
+    display: none;
+}
+.layoutsContainer .layout .terms{
+    width: 100%;
+    padding: 2em 1em;
+    border: 1px solid var(--goldLight);
+    height: 50vh;
+    overflow-y: auto;
+    line-height: 1.6;
+}
+
+.layoutsContainer .layout .terms h2{
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 24px;
+}
+.layoutsContainer .layout .terms h3{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 20px;
+}
+.layoutsContainer .layout.ar .terms h2{
+    font-size: 25px;
+}
+.layoutsContainer .layout.ar .terms h3{
+    font-size: 21px;
+}
+
+.layoutsContainer .layout .terms ul,
+.layoutsContainer .layout .terms ol{
+    width: 90%;
+    margin-left: 10%;
+    margin-bottom: 1em;
+}
+.layoutsContainer .layout.ar .terms ul,
+.layoutsContainer .layout.ar .terms ol{
+    margin-left: 0;
+    margin-right: 10%;
+}
+
+.layoutsContainer .layout .terms li{
+    font-size: 14px;
+}
+.layoutsContainer .layout.ar .terms li{
+    font-size: 15px;
+}
+
+.layoutsContainer .layout .terms p{
+    margin-bottom: 1em;
+    font-size: 14px;
+}
+.layoutsContainer .layout.ar .terms p{
+    font-size: 15px;
+}
+
+.layoutsContainer .layout h4{
+    text-align: center;
+    padding: 1em 1em 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.layoutsContainer .layout.ar h4{
+    font-size: 17px;
+}
+
+.layoutsContainer .layout .optionsContainer{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.layoutsContainer .layout .optionsContainer button{
+    margin:1em;
+    width: 120px;
+    height: 100px;
+    background: var(--goldDark);
+    background: rgb(214,151,120);
+    background: linear-gradient(225deg, rgba(214,151,120,1) 0%, rgba(163,105,75,1) 100%);
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0.5em;
+    line-height: 1.6;
+    font-family: 'NunitoSans', sans-serif!important;
+}
+.layoutsContainer .layout.ar .optionsContainer button{
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Tajawal', sans-serif!important;
+}
+
+
+
+
+/* FORMS */
+.formLayout{
+    width: 100%;
+    /* border: 1px solid var(--goldLight); */
+    padding: 2em 1em;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formLayout.active{
+    display: flex;
+}
+.formLayout form{
+    width: 70vw;
+    max-width: 400px;
+
+}
+.formLayout form .fieldContainer{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1em;
+    /* max-width: 80%; */
+}
+.formLayout form .fieldContainer label{
+    margin-bottom: 0.5em;
+    color: var(--goldDark);
+    width:100%;
+}
+.formLayout form .fieldContainer input{
+    padding: 1em 1em;
+    max-height: none;
+    font-size: 16px;
+    font-weight: 500;
+    width:100%;
+    background: #fefef7;
+    border: 1px solid var(--goldLight);
+    font-family: 'NunitoSans', sans-serif!important;
+}
+.formLayout.ar form .fieldContainer input{
+    font-family: 'Tajawal', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Tajawal', sans-serif!important;
+}
+.formLayout form .submitBtn{
+    width:100%;
+    margin-top: 2em;
+}
+.formLayout form .submitBtn button{
+    width:100%;
+    background: var(--goldDark);
+    background: rgb(214,151,120);
+    background: linear-gradient(225deg, rgba(214,151,120,1) 0%, rgba(163,105,75,1) 100%);
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1em 2em;
+    line-height: 1.6;
+    font-family: 'NunitoSans', sans-serif!important;
+}
+.formLayout.ar form .submitBtn button{
+    font-family: 'Tajawal', sans-serif!important;
+    font-size: 17px;
+    font-weight: 500;
+}
+.formLayout.ar form{
+    direction: rtl;
+}
+
+
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1em; */
+}
+
+
