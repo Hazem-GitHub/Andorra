@@ -27,7 +27,7 @@ a{
     text-decoration: none;
 }
 button:focus{
-    outline: 1px solid var(--goldLight);
+    outline: none;
 }
 html{
     width: 100%;
@@ -87,8 +87,9 @@ body{
     background: var(--white);
     color: var(--black);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 0.8;
+    box-shadow: 1px 3px 6px rgb(163, 105, 75, 0.2);
 }
 .langBtns button.ar{
     font-size: 16px;
@@ -96,9 +97,16 @@ body{
 .langBtns button.active{
     background: var(--goldLight);
     background: rgb(214,151,120);
-background: linear-gradient(225deg, rgba(214,151,120,1) 0%, rgba(163,105,75,1) 100%);
-    font-weight: 500;
+    background: linear-gradient(225deg, rgba(214,151,120,1) 0%, rgba(163,105,75,1) 100%);
+    font-weight: 600;
     color: var(--white);
+    box-shadow: 0px 0px 0px rgb(163, 105, 75, 0);
+}
+.langBtns button:first-of-type{
+    border-radius: 5px 0 0 5px;
+}
+.langBtns button:last-of-type{
+    border-radius: 0 5px 5px 0;
 }
 
 
@@ -221,22 +229,25 @@ background: linear-gradient(225deg, rgba(214,151,120,1) 0%, rgba(163,105,75,1) 1
 }
 .layoutsContainer .layout .optionsContainer button{
     margin:1em;
-    width: 120px;
+    width: 140px;
     height: 100px;
     background: var(--goldDark);
     background: rgb(214,151,120);
     background: linear-gradient(225deg, rgba(214,151,120,1) 0%, rgba(163,105,75,1) 100%);
-    border: none;
     color: var(--white);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 0.5em;
     line-height: 1.6;
     font-family: 'NunitoSans', sans-serif!important;
+    box-shadow: 1px 3px 6px rgb(163, 105, 75, 0.2);
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    border: 1px solid var(--goldLight);
 }
 .layoutsContainer .layout.ar .optionsContainer button{
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
     font-family: 'Tajawal', sans-serif!important;
 }
 
@@ -284,6 +295,7 @@ background: linear-gradient(225deg, rgba(214,151,120,1) 0%, rgba(163,105,75,1) 1
     background: #fefef7;
     border: 1px solid var(--goldLight);
     font-family: 'NunitoSans', sans-serif!important;
+    border-radius: 5px;
 }
 .formLayout.ar form .fieldContainer input{
     font-family: 'Tajawal', sans-serif;
@@ -303,15 +315,19 @@ background: linear-gradient(225deg, rgba(214,151,120,1) 0%, rgba(163,105,75,1) 1
     border: none;
     color: var(--white);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 1em 2em;
     line-height: 1.6;
     font-family: 'NunitoSans', sans-serif!important;
+    box-shadow: 1px 3px 6px rgb(163, 105, 75, 0.2);
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    border: 1px solid var(--goldLight);
 }
 .formLayout.ar form .submitBtn button{
     font-family: 'Tajawal', sans-serif!important;
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .formLayout.ar form{
     direction: rtl;
@@ -325,6 +341,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 4em;
     /* padding: 1em; */
 }
 
